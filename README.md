@@ -5,6 +5,5 @@ The algorithm was tested on OpenAI Gym 'Pendulum-v1' environment
 
 This implementation is heavily inspired by @mandrakedrink's one for PyTorch (https://github.com/mandrakedrink/PPO-pytorch)
 
+To take a look at the parameters you can set, run:
 `python main.py -h`
-
-to set the parameters
