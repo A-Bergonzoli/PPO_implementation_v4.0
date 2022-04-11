@@ -76,12 +76,3 @@ def make_env(env_id, config):
     env.seed(config.seed)
 
     return env
-
-
-def plot_learning_curve(x, scores, plots_dir, figure_file):
-    os.makedirs(plots_dir, exist_ok=True)
-    plt.plot(x, scores)
-    plt.title('Score history')
-    plt.xlabel('# of iterations')
-    plt.ylabel('score')
-    plt.savefig(figure_file)
