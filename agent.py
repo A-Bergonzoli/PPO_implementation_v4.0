@@ -298,17 +298,15 @@ class Agent(object):
         return returns
 
     def _batch_generator(self,
-                         states: tf.Tensor,
-                         actions: tf.Tensor,
-                         returns: tf.Tensor,
-                         log_probs: tf.Tensor,
-                         values: tf.Tensor,
-                         advantages: tf.Tensor):
+                         states,
+                         actions,
+                         returns,
+                         log_probs,
+                         values,
+                         advantages):
         """Generates batch for the training of the agent. Note that the memory must be sampled randomly
         """
-        ##data_len = states.get_shape().as_list()[0]
-        # data_len = tf.shape(states)[0]
-        data_len = 4000
+        data_len = len(states)  # we are interested in the first dimension
         for _ in range(self.params["NUM_TRAIN_EPOCHS"]):
             for _ in range(data_len // self.params["MINIBATCH_SIZE"]):
                 idxs = np.random.choice(data_len, self.params["MINIBATCH_SIZE"])
