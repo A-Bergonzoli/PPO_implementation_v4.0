@@ -5,7 +5,7 @@ class Memory:
         self.actions = []
         self.rewards = []
         self.dones = []
-        self.log_probs = []
+        self.log_probs = []  # log of probability density function (pdf)
         self.values = []
 
     def clear_mem(self):
