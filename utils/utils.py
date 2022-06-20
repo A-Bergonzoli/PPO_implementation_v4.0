@@ -23,7 +23,7 @@ def parse_args():
                         help="whether to use the QKeras API for quantization (default false)")
 
     # Algorithm specific arguments
-    parser.add_argument("--env_id", type=str, default="Myturtlebot-v0", metavar='',
+    parser.add_argument("--env_id", type=str, default="Pendulum-v1", metavar='',
                         help="the id of the environment")
     parser.add_argument("--num_iterations", type=int, default=2000, metavar='',
                         help="max number of iterations of rollout and training (default 2000)")
